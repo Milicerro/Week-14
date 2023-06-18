@@ -1,4 +1,5 @@
 class checkoutPage {
+
     get title() {
         return $("#header_container > div.header_secondary_container > span");
     }

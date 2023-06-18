@@ -1,4 +1,4 @@
-/*import homePage from "../pageobjects/homePage.js";
+import homePage from "../pageobjects/homePage.js";
 import logIn from "../pageobjects/logIn.js";
 import productsPage from "../pageobjects/productsPage.js";
 
@@ -68,8 +68,8 @@ describe("Products interaction correct user.", () => {
     await productsPage.removeBikelight.click();
     await browser.pause(1000);
 
-    expect(await productsPage.bpackDescrBtn.isExisting()).toBe(false);//
-    expect(await productsPage.backlightDescrBtn.isExisting()).toBe(false);//
+    expect(await productsPage.bpackDescrBtn.isExisting()).toBe(false);
+    expect(await productsPage.backlightDescrBtn.isExisting()).toBe(false);
     await browser.pause(1000);
 
     await productsPage.contShoppBtn.click();
@@ -93,4 +93,4 @@ describe("Products interaction correct user.", () => {
     await productsPage.contShoppBtn.click();
     await browser.pause(1000);
   });
-});*/
+});
