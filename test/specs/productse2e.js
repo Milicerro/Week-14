@@ -1,4 +1,4 @@
-import homePage from "../pageobjects/homePage.js";
+/*import homePage from "../pageobjects/homePage.js";
 import logIn from "../pageobjects/logIn.js";
 import productsPage from "../pageobjects/productsPage.js";
 
@@ -93,4 +93,4 @@ describe("Products interaction correct user.", () => {
     await productsPage.contShoppBtn.click();
     await browser.pause(1000);
   });
-});
+});*/

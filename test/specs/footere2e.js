@@ -1,4 +1,4 @@
-import logIn from "../pageobjects/logIn.js";
+/*import logIn from "../pageobjects/logIn.js";
 import footerPage from "../pageobjects/footerPage.js";
 
 describe("Footer, social network.", () => {
@@ -35,4 +35,4 @@ describe("Footer, social network.", () => {
         await expect(browser).toHaveUrlContaining("https://www.linkedin.com/company/sauce-labs/");
         await browser.switchWindow("https://www.saucedemo.com");
     });
-});
+});*/

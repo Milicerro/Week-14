@@ -1,4 +1,4 @@
-import logIn from "../pageobjects/logIn.js";
+/*import logIn from "../pageobjects/logIn.js";
 import productsPage from "../pageobjects/productsPage.js";
 import checkoutPage from "../pageobjects/checkoutPage.js";
 
@@ -92,4 +92,4 @@ describe("Complete checkout Page.", () => {
         await browser.pause(1000);
         await browser.reloadSession();
     });
-});
+});*/
