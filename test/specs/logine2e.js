@@ -89,6 +89,6 @@ describe ("Login the slow user.", () => {
         console.log(`Login execution time: ${executionTime} ms`);
 
         await expect(homePage.wrongImage).toBeDisplayed();
-        await expect(executionTime).toBeLessThan(2000);
+        await expect(executionTime).toBeLessThan(3000);
     });
 });

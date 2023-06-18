@@ -1,4 +1,4 @@
-class homePage{
+class homePage {
 
     get welcomePage() {
         return $("#header_container > div.header_secondary_container > span");
@@ -11,6 +11,7 @@ class homePage{
     get wrongImage() {
         return $("#item_0_img_link > img");
     }
+
 }
 
 export default new homePage();
