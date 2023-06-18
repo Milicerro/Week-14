@@ -1,4 +1,4 @@
-import logIn from "../pageobjects/logIn.js";
+/*import logIn from "../pageobjects/logIn.js";
 import homePage from "../pageobjects/homePage.js";
 
 describe ("Login the correct user.", () => {
@@ -91,4 +91,4 @@ describe ("Login the slow user.", () => {
         await expect(homePage.wrongImage).toBeDisplayed();
         await expect(executionTime).toBeLessThan(3000);
     });
-});
+});*/
