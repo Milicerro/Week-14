@@ -1,6 +1,4 @@
 import logIn from "../pageobjects/logIn.js";
-import productsPage from "../pageobjects/productsPage.js";
-import checkoutPage from "../pageobjects/checkoutPage.js";
 import menuPage from "../pageobjects/menuPage.js";
 
 describe("Accessing the webpage.", () => {
@@ -13,14 +11,16 @@ describe("Accessing the webpage.", () => {
         await logIn.login("standard_user", "secret_sauce");
         await logIn.btnLoginClick();
     });
-});
 
-describe("Checking All Items page.", () => {
-    it("Clicking on the All Items button should redirect to the inventory Page.", async () => {
+    it("Checking Sidebar page and the log-out.", async () => {
         await browser.pause(3000);
         await menuPage.menuBtn.click();
         await browser.pause(2000);
         await expect(menuPage.sideBar).toBeDisplayed();
+        await expect(menuPage.menuCrossBtn).toBeDisplayed();
+        await expect(menuPage.allItemsBtn).toBeDisplayed();
+        await expect(menuPage.aboutBtn).toBeDisplayed();
+        await expect(menuPage.resetBtn).toBeDisplayed();
         await menuPage.logOutBtn.click();
     });
 });

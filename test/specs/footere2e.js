@@ -1,4 +1,4 @@
-/*import logIn from "../pageobjects/logIn.js";
+import logIn from "../pageobjects/logIn.js";
 import footerPage from "../pageobjects/footerPage.js";
 
 describe("Footer, social network.", () => {
@@ -11,6 +11,7 @@ describe("Footer, social network.", () => {
         await logIn.login("standard_user", "secret_sauce");
         await logIn.btnLoginClick();
         await browser.pause(1000);
+        await expect(footerPage.copyRight).toBeDisplayed();
     });
 
     it("Test redirection to social network pages work correctly.", async () => {
@@ -30,9 +31,9 @@ describe("Footer, social network.", () => {
 
         await footerPage.linkedin.click();
         await browser.pause(2000);
-        await browser.switchWindow("linkedin.com");
+        await browser.switchWindow("https://www.linkedin.com/company/sauce-labs/");
         await browser.pause(2000);
         await expect(browser).toHaveUrlContaining("https://www.linkedin.com/company/sauce-labs/");
         await browser.switchWindow("https://www.saucedemo.com");
     });
-});*/
+});

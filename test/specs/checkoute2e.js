@@ -1,4 +1,4 @@
-/*import logIn from "../pageobjects/logIn.js";
+import logIn from "../pageobjects/logIn.js";
 import productsPage from "../pageobjects/productsPage.js";
 import checkoutPage from "../pageobjects/checkoutPage.js";
 
@@ -13,9 +13,7 @@ describe("Accessing the web page correct user.", () => {
         await logIn.login("standard_user", "secret_sauce");
         await logIn.btnLoginClick();
     });
-});
 
-describe("Filling customer data in Checkout.", () => {
     it("Adding products to cart", async () => {
         await productsPage.addBackpack.click();
         await browser.pause(1000);
@@ -30,6 +28,8 @@ describe("Filling customer data in Checkout.", () => {
     });
 
     it("Verify Checkout page is correctly displayed.", async () => {
+        await checkoutPage.checkBtn.click();
+        await browser.pause(1000);
         await expect(browser).toHaveUrl("https://www.saucedemo.com/checkout-step-one.html");
         await expect(checkoutPage.title).toHaveText("Checkout: Your Information");
     });
@@ -52,9 +52,7 @@ describe("Filling customer data in Checkout.", () => {
 
         await expect(browser).toHaveUrl("https://www.saucedemo.com/inventory.html");
     });
-});
 
-describe("Finish button test - correct purchase.", () => {
     it("Adding products and proceed to cart - checkout.", async () => {
         await productsPage.cartBtn.click();
         await browser.pause(1000);
@@ -80,9 +78,7 @@ describe("Finish button test - correct purchase.", () => {
         await browser.pause(1000);
         await expect(browser).toHaveUrl('https://www.saucedemo.com/checkout-complete.html');
     });
-});
 
-describe("Complete checkout Page.", () => {
     it("Verify Checkout page is displayed and has this title.", async () => {
         await expect(browser).toHaveUrl("https://www.saucedemo.com/checkout-complete.html");
         await expect(checkoutPage.title).toHaveText("Checkout: Complete!");
@@ -92,4 +88,4 @@ describe("Complete checkout Page.", () => {
         await browser.pause(1000);
         await browser.reloadSession();
     });
-});*/
+});

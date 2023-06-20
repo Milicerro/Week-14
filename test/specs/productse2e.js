@@ -1,4 +1,4 @@
-/*import homePage from "../pageobjects/homePage.js";
+import homePage from "../pageobjects/homePage.js";
 import logIn from "../pageobjects/logIn.js";
 import productsPage from "../pageobjects/productsPage.js";
 
@@ -8,13 +8,15 @@ describe("Products interaction correct user.", () => {
     browser.url("https://www.saucedemo.com");
   });
 
-  it("Successfully login process.", async () => {
+  it ("Successfuly login process.", async () => {
+    await expect(logIn.loginLogo).toBeDisplayed();
     await expect(logIn.userNameInput).toBeDisplayed();
+    await expect(logIn.passwordInput).toBeDisplayed();
     await logIn.login("standard_user", "secret_sauce");
     await logIn.btnLoginClick();
   });
 
-  it("Allow access.", async () => {
+  it ("Verify user welcome page.", async () => {
     await expect(homePage.welcomePage).toBeDisplayed();
     await expect(homePage.welcomePage).toHaveTextContaining("Products");
     await expect(homePage.correctImage).toBeDisplayed();
@@ -76,21 +78,17 @@ describe("Products interaction correct user.", () => {
     await browser.pause(1000);
   });
 
-  it("Testing adding/removing products to cart from Inventory page", async () => {
+  it("Testing adding products to cart from Inventory page", async () => {
     await productsPage.addBackpack.click();
     await browser.pause(1000);
     await productsPage.addBikelight.click();
     await browser.pause(1000);
 
     await productsPage.cartBtn.click();
-    await browser.pause(2000);
+  });
 
-    await productsPage.removeBackpack.click();
-    await browser.pause(1000);
-    await productsPage.removeBikelight.click();
-    await browser.pause(1000);
-
+  it("Verify Checkout page.", async () => {
     await productsPage.contShoppBtn.click();
     await browser.pause(1000);
   });
-});*/
+});

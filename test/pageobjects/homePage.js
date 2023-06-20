@@ -11,7 +11,6 @@ class homePage {
     get wrongImage() {
         return $("#item_0_img_link > img");
     }
-
 }
 
 export default new homePage();

@@ -15,7 +15,6 @@ class footerPage {
     get linkedin() {
         return $("#page_wrapper > footer > ul > li.social_linkedin");
     }
-
 }
 
 export default new footerPage();
